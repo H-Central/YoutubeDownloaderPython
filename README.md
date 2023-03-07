@@ -10,7 +10,7 @@ You need pip module:
 pip install pytube
 pip install fileinput
 
-or
+or (on linux or mac)
 
 pip3 install pytube
 pip3 install fileinput
@@ -25,7 +25,7 @@ py -m pip install fileinput
 ```py
 python main.py
 
-or
+or (on linux or mac)
 
 python3 main.py
 
