@@ -14,6 +14,11 @@ or
 
 pip3 install pytube
 pip3 install fileinput
+
+or (with python on microsoft store)
+
+py -m pip install pytube
+py -m pip install fileinput
 ```
 
 ### Execute the tool
@@ -23,6 +28,10 @@ python main.py
 or
 
 python3 main.py
+
+or (with python on microsoft store)
+
+py main.py
 ```
 
 #### License
