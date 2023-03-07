@@ -13,12 +13,12 @@ filename = "YTB"
 while True:
     format = input("What format you want: (1 - mp3) (2 - mp4)\n")
     match format:
-        case "mp3":
+        case "mp3" | "1":
             downloader = mp3()
             filename += "audio.mp3"
-        case "mp4":
+        case "mp4" | "2":
             downloader = mp4()
-            filename += "audio.mp4"
+            filename += "video.mp4"
         case other:
             print("Bad format")
             continue
