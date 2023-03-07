@@ -18,7 +18,7 @@ while True:
             filename += "audio.mp3"
         case "mp4":
             downloader = mp4()
-            filename += "audio.mp4"
+            filename += "video.mp4"
         case other:
             print("Bad format")
             continue
