@@ -1,2 +1,2 @@
 # YoutubeDownloaderPython
-A YouTube vidéo/audio downloader written in Python
+A YouTube video/audio downloader written in Python
