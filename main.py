@@ -5,9 +5,6 @@ link = input("Set our video link:\n")
 format = input("What format you want: (1 - mp3) (2 - mp4)\n")
 yt = YouTube(link)
 
-if format != 1 or 2:
-    print("Our choice is wrong")
-
 def mp3():
     downloader.download(filename="YTBaudio.mp3")
 def mp4():
