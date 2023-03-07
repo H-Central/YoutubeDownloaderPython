@@ -2,21 +2,29 @@ from fileinput import filename
 from pytube import YouTube
 
 link = input("Set our video link:\n")
-format = input("What format you want: (1 - mp3) (2 - mp4)\n")
 yt = YouTube(link)
 
 def mp3():
-    downloader.download(filename="YTBaudio.mp3")
+    return yt.streams.filter(file_extension='mp3').get_highest_resolution()
 def mp4():
-    downloader.download(filename="YTBvideo.mp4")
-
-downloader = yt.streams.get_highest_resolution()    
-print("Download please wait")
-
-if format == "1":
-    mp3()
-else:
-    mp4()
+    return yt.streams.filter(file_extension='mp4').get_highest_resolution()
+    
+filename = "YTB"
+while True:
+    format = input("What format you want: (1 - mp3) (2 - mp4)\n")
+    match format:
+        case "mp3":
+            downloader = mp3()
+            filename += "audio.mp3"
+        case "mp4":
+            downloader = mp4()
+            filename += "audio.mp4"
+        case other:
+            print("Bad format")
+            continue
+    print("Download is starting... Please wait")
+    downloader.download(filename=filename)
+    break
 
 print("finish")
 print(f"Check the result at {filename}")
